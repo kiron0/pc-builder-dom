@@ -21,22 +21,24 @@ function updatePrice(itemId, price) {
     const storagePrice = document.getElementById('storage-cost').innerText;
     const deliveryPrice = document.getElementById('delivery-cost').innerText;
     const totalPrice = document.getElementById('total-price');
+    const totalPriceWithPromo = document.getElementById('total-price-with-promo');
 
     let total = parseFloat(bestPrice) + parseFloat(memoryPrice) + parseFloat(storagePrice) + parseFloat(deliveryPrice);
 
     totalPrice.innerText = total;
+    totalPriceWithPromo.innerText = total;
 }
 
 const cuoponApplied = document.getElementById('applied-text');
 const cuoponNotApplied = document.getElementById('not-applied');
 cuoponApplied.style.display = 'none';
 cuoponNotApplied.style.display = 'none';
-const cuoponCode = 'fokirerJonnoOffer';
+const cuoponCode = 'LeDilam25Percent';
 document.getElementById('apply-btn').addEventListener('click', function () {
     const cuopon = document.getElementById('promo-input');
     const cuoponInput = cuopon.value;
     if (cuoponCode === cuoponInput) {
-        const total = document.getElementById('total-price');
+        const total = document.getElementById('total-price-with-promo');
         let totalPrice = parseFloat(total.innerText);
 
         const discount = (totalPrice * 25) / 100;
