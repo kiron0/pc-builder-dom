@@ -24,6 +24,8 @@ body {
 }
 
 .button-style{
+    margin-right: 5px;
+    border: 1px solid cornflowerblue;
     border-radius: 6px;
     padding: 7px;
 }
