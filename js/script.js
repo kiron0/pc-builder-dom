@@ -29,11 +29,14 @@ function updatePrice(itemId, price) {
     totalPriceWithPromo.innerText = total;
 }
 
+// apply promo code
 const cuoponApplied = document.getElementById('applied-text');
 const cuoponNotApplied = document.getElementById('not-applied');
 cuoponApplied.style.display = 'none';
 cuoponNotApplied.style.display = 'none';
+
 const cuoponCode = 'LeDilam25Percent';
+
 document.getElementById('apply-btn').addEventListener('click', function () {
     const cuopon = document.getElementById('promo-input');
     const cuoponInput = cuopon.value;
@@ -41,7 +44,7 @@ document.getElementById('apply-btn').addEventListener('click', function () {
         const total = document.getElementById('total-price-with-promo');
         let totalPrice = parseFloat(total.innerText);
 
-        const discount = (totalPrice * 25) / 100;
+        let discount = totalPrice * 0.25;
 
         totalPrice = totalPrice - discount;
 

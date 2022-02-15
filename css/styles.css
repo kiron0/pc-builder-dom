@@ -8,8 +8,12 @@ body {
 
 /* ---------------------Customization section -------------------------- */
 .margin-top{
-    margin-top: 25px;
+    margin-top: 30px;
 }
+.margin-top2{
+    margin-top: 33px;
+}
+
 .bold{
     font-weight: 700;
 }
